@@ -22,7 +22,7 @@ function travis_time_end {
     set -x
 }
 
-apt-get update -qq && apt-get install -y -q wget sudo lsb-release gnupg # for docker
+apt-get update -qq && apt-get install -y -q wget sudo lsb-release gnupg build-essential # for docker
 DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata # https://stackoverflow.com/questions/44331836/apt-get-install-tzdata-noninteractive
 
 travis_time_start setup.before_install
